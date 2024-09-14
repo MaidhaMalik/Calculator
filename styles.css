@@ -1,0 +1,116 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+.calculator {
+    width: 100%;
+    max-width: 360px; 
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.display {
+    background-color: #1d1d1d;
+    color: #fff;
+    padding: 20px;
+    font-size: 2.2em; 
+    text-align: right;
+    overflow-wrap: break-word; 
+    word-wrap: break-word;
+    border-bottom: 1px solid #333;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+.display input {
+    width: 100%;
+    border: none;
+    background: transparent;
+    color: inherit;
+    text-align: right;
+    font-size: inherit;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1px;
+    padding: 1px;
+}
+
+.btn {
+    background-color: #e0e0e0;
+    border: 1px solid #ccc;
+    padding: 20px;
+    font-size: 1.6em; 
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s, transform 0.2s;
+}
+
+.btn:hover {
+    background-color: #c6c6c6;
+}
+
+.btn:active {
+    transform: scale(0.95); 
+}
+
+.btn-clear-container {
+    grid-column: span 4; 
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 1px;
+}
+
+.btn-clear {
+    grid-column: span 2; 
+    background-color: #ff6f6f;
+    color: #fff;
+    font-size: 1.5em;
+}
+
+.btn-clear:hover {
+    background-color: #ff4c4c;
+}
+
+.btn.operator {
+    background-color: #ff9e40;
+    color: #fff;
+}
+
+.btn.operator:hover {
+    background-color: #ff7f00;
+}
+
+.btn.special {
+    background-color: #e0f7fa;
+}
+
+.btn.special:hover {
+    background-color: #b2ebf2;
+}
+
+@media (max-width: 600px) {
+    .display {
+        font-size: 1.8em; 
+        padding: 15px;
+    }
+
+    .btn {
+        font-size: 1.4em; 
+        padding: 15px;
+    }
+}
